@@ -21,21 +21,17 @@ scanf("%d", &n);
 for(int i = 0; i < n; i++)
 {
     scanf("%d %d", &a, &b);
+    int found = 0;
     for(int j = 0; j < 6; j++)
     {
         if(a == matrix[j][0] & b == matrix[j][1])
         {
             printf("%d\n", matrix[j][2]);
+            found = 1;
             break;
-        }
-        else
-        {
-            printf("error\n");
-            break;
-
         }
     }
-
+    if(!found)
+        printf("error\n");
 }
-
 }
